@@ -51,5 +51,17 @@ Tiny portable [Arbitrary-precision arithmetic](https://en.wikipedia.org/wiki/Arb
 - `std::numeric_limits`: standard C++ numeric limits library support.
 
 ## Usage
-
+### Create a BigNumber
+```cpp
+#include "BigNumber.h"      // include BigNumber library.
+using BigMath::BigNumber;   // BigNumber define in BigMath namespace.
+BigNumber<8> myNumber = 0;  // Create a 8-wordsize (256-bits) signed integer.
+```
+### Assignment to your BigNumber
+```cpp
+myNumber = 429264526;           // Assignment by int.
+myNumber = 157744114380602‬ULL;  // Assignment by uint64_t.
+myNumber = 24512.5f             // Assignment by float.
+myNumber = 3.14159e25           // Assignment by double.
+```
 
